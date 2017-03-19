@@ -1,7 +1,6 @@
 {
   "name": "Papacoy-WebdevFinaProject",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "dependencies": {
     "express": "^4.15.2"
@@ -13,5 +12,14 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/papacoy/FinalExam.git"
+  },
+  "bugs": {
+    "url": "https://github.com/papacoy/FinalExam/issues"
+  },
+  "homepage": "https://github.com/papacoy/FinalExam#readme",
+  "description": ""
 }
