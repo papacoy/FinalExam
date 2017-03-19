@@ -12,8 +12,36 @@ app.get('/', function(req, res){
   res.sendFile(path.join(__dirname, 'views/app.html'));
 });
 app.get('/about', function(req, res){
-  res.sendFile(path.join(__dirname, 'view/about.html'));
+  res.sendFile(path.join(__dirname, 'views/about.html'));
 });
+app.get('/gallery', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/Gallery.html'));
+});
+app.get('/trailer', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/trailer.html'));
+});
+app.get('/hero', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/Hero.html'));
+});
+app.get('/enemy', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/Enemy.html'));
+});
+app.get('/god', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/God.html'));
+});
+app.get('/dragonballsuper', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/DragonBallSuper.html'));
+});
+app.get('/dragonballgt', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/DragonBallGT.html'));
+});
+app.get('/dragonballkai', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/DragonBallKai.html'));
+});
+app.get('/dragonballz', function(req, res){
+  res.sendFile(path.join(__dirname, 'views/DragonBallZ.html'));
+});
+
 app.get('*', function(req, res){
   res.status(404).sendFile(path.join(__dirname, 'views/404.html'));
 });

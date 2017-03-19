@@ -1,20 +1,22 @@
-$('#app').html(`
+$('#super').html(`
 	<div class="progress">
-      <div class="indeterminate"></div>
+      <div class="indeterminate"></div> 
   </div>
 `);
-
-
 setTimeout(function(){
-	x();
-},3000);
+	y();
+},1000);
 
-function x(){
+function y(){
 $.ajax({
-	url: "http://www.omdbapi.com/?i=tt4422836"
+	url: "http://www.omdbapi.com/?t=dragon+ball+super" 
 }).done(function(res){
 	console.log(res);
 	let html = `
+	 <style> h1 , h3 , h5{ color: yellow;  text-shadow: 2px 2px 5px red;
+        
+	    }
+	    </style>
 		<h1>${res.Title}</h1>
 		<img src="${res.Poster}"/>
 		<h3>${res.Year}</h1>
@@ -23,13 +25,46 @@ $.ajax({
 		<h5>Writer: ${res.Writer}</h5>
 		<h5>Actors: ${res.Actors}</h5>
 	`;
-	$('#app').html(html);
-
-
+	$('#super').html(html);
 });
 }
 
-$('#apps').html(`
+
+$('#gt').html(`
+	<div class="progress">
+      <div class="indeterminate"></div> 
+  </div>
+`);
+
+
+setTimeout(function(){
+	x();
+},1000);
+
+function x(){
+$.ajax({
+	url: "http://www.omdbapi.com/?t=dragon+ball+GT" 
+}).done(function(res){
+	console.log(res);
+	let html = `
+	 <style> h1 , h3 , h5{ color: yellow;  text-shadow: 2px 2px 5px red;
+        
+	    }
+	    </style>
+		<h1>${res.Title}</h1>
+		<img src="${res.Poster}"/>
+		<h3>${res.Year}</h1>
+		<h5><p>${res.Plot}</p></h5>
+		<h5>Genre: ${res.Genre}</h5>
+		<h5>Writer: ${res.Writer}</h5>
+		<h5>Actors: ${res.Actors}</h5>
+	`;
+	$('#gt').html(html);
+});
+}
+
+
+$('#z').html(`
 	<div class="progress">
       <div class="indeterminate"></div>
   </div>
@@ -37,15 +72,19 @@ $('#apps').html(`
 
 
 setTimeout(function(){
-	y();
-},3000);
+	v();
+},1000);
 
-function y(){
+function v(){
 $.ajax({
-	url: "http://www.omdbapi.com/?i=tt1219289&plot=full"
+	url: "http://www.omdbapi.com/?t=dragon%20ball%20z" 
 }).done(function(res){
 	console.log(res);
 	let html = `
+	    <style> h1 , h3 , h5{ color: yellow;  text-shadow: 2px 2px 5px red;
+        
+	    }
+	    </style>
 		<h1>${res.Title}</h1>
 		<img src="${res.Poster}"/>
 		<h3>${res.Year}</h1>
@@ -55,10 +94,46 @@ $.ajax({
 		<h5>Writer: ${res.Writer}</h5>
 		<h5>Actors: ${res.Actors}</h5>
 	`;
-	$('#apps').html(html);
+	$('#z').html(html);
 
 
 });
 }
 
+
+$('#kai').html(`
+	<div class="progress">
+      <div class="indeterminate"></div>
+  </div>
+`);
+
+
+setTimeout(function(){
+	a();
+},1000);
+
+function a(){
+$.ajax({
+	url: "http://www.omdbapi.com/?t=dragon+ball" 
+}).done(function(res){
+	console.log(res);
+	let html = `
+	 <style> h1 , h3 , h5{ color: yellow;  text-shadow: 2px 2px 5px red;
+        
+	    }
+	    </style>
+		<h1>${res.Title}</h1>
+		<img src="${res.Poster}"/>
+		<h3>${res.Year}</h1>
+		<h5><p>${res.Plot}</p></h5>
+		<h5>Genre: ${res.Genre}</h5>
+		<h5>Director: ${res.Director}</h5>
+		<h5>Writer: ${res.Writer}</h5>
+		<h5>Actors: ${res.Actors}</h5>
+	`;
+	$('#kai').html(html);
+
+
+});
+}
 
